@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\PostLikeController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
@@ -30,7 +31,11 @@ Route::get('dashboard', [DashboardController::class, 'index']);
 
 Route::get('post', [PostController::class, 'index'])->name('posts');
 Route::post('post', [PostController::class, 'store']);
+Route::delete('post/{post}/delete', [PostController::class, 'destroy']);
+
+Route::post('posts/{post}/like', [PostLikeController::class, 'store']);
+Route::delete('posts/{post}/unlike', [PostLikeController::class, 'destroy']);
 
 Route::get('/', function () {
-    return view('posts.index');
+    return view('welcome');
 });

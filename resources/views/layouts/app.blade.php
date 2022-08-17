@@ -13,7 +13,7 @@
     <title>blog</title>
 </head>
 
-<body class="bg-secondary text-light">
+<body class="bg-secondary text-dark">
     <nav class="navbar navbar-expand-lg navbar-light bg-info">
         <a class="navbar-brand" href="#">blog</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

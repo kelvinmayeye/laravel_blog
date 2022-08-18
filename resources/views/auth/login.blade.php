@@ -6,7 +6,7 @@
             <div class="col-md-6 col-sm-12 mx-auto">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item active" aria-current="page">login</li>
+                        <li class="breadcrumb-item" aria-current="page">login</li>
                     </ol>
                 </nav>
                 @if (Session::has('fail'))
@@ -43,7 +43,7 @@
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="remember" id="invalidCheck">
                                 <label class="text-secondary">
-                                    
+                                    Remember Me
                                 </label>
                             </div>
                         </div>

@@ -33,6 +33,7 @@ Route::get('logout', [LogoutController::class, 'logout']);
 Route::get('dashboard', [DashboardController::class, 'index']);
 
 Route::get('post', [PostController::class, 'index'])->name('posts');
+Route::get('post/{post}/show', [PostController::class, 'show']);
 Route::post('post', [PostController::class, 'store']);
 Route::delete('post/{post}/delete', [PostController::class, 'destroy']);
 

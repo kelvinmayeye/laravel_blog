@@ -12,7 +12,7 @@
       <div class="form-card bg-light p-3 rounded">
         <div class="row">
           <div class="col-md-6 col-sm-12 mx-auto">
-            
+            <x-post :post="$post" />
           </div>
         </div>
       </div>

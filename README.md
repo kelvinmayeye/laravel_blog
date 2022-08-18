@@ -1,65 +1,84 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
-
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+# laravel_simple_blog
+<p> <b>This is a simple web application focusing of blog activies/actions</b>.<br><br>Laravel offers Better authentication and Authorization option such as Login, Registration, and Password Reset. You will be surprised to witness that Laravel does all this with the help of a single command. It also provides a simple way to organize authorization logic and control access to resources.<br>
+Laravel helps you to stay from technical vulnerabilities ‘Security Vulnerabilities.’ A study by OWASP Foundation describes SQL injection, cross-site request forgery, cross-site scripting, etc. as the most critical web application security vulnerabilities.</br>
+Laravel architecture is MVC-based, and this is something that makes Laravel the best PHP framework for website development.MVC architecture comes up with built-in functionalities that developers can use at their best while building your web app. Apart from this, MVC architecture provides better documentation, improved performance, and multiple built-in functionalities compared to other PHP frameworks.
 </p>
 
-## About Laravel
+# The following Laravel Concepts are Covered under this Projects
+1. Registering users
+2. Signing in after registration
+3. Authenticated state
+4. Logging in and Logout
+5. Middleware(to archive authorization)
+6. User/post relationship
+7. Pagination(using Boostrap)
+8. Seeding with model factories
+9. Eager loading(to reduce number of query)
+10. Blade components
+11. Like count Eloquent relationship
+12. Sending email(using mailtrap)
+13. Soft deleting models
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+> This Project specification.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Laravel Framework 8.8.2
+- php version 8.4
+- mysql  Ver 8.0.30
+- boostrap 4.0
+- Composer 2.3.10
+- 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Installation
 
-## Learning Laravel
+1. Clone repo
+   ```sh
+   git clone https://github.com/your_username_/Project-Name.git
+   ```
+2. Run Composer install
+   ```sh
+   composer install
+   ```
+3. Copy .env.example to .env
+    ```sh
+   cp .env.example .env
+   ```
+4. Generate Key
+    ```sh
+   php artisan key:generate
+   ```
+5. add these configuration on .env file
+    ```sh
+   DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=blog
+    DB_USERNAME=blog
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+    MAIL_MAILER=smtp
+    MAIL_HOST=smtp.mailtrap.io
+    MAIL_PORT=2525
+    MAIL_USERNAME=1462162b6282d8
+    MAIL_PASSWORD=ea91eb509f0e77
+    MAIL_ENCRYPTION=tls
+    MAIL_FROM_ADDRESS=johndoe@gmail.com
+   ```
+6. Create Database named blog
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+8. install dbal package for database schema introspection and management.
+    ```sh
+   composer require doctrine/dbal
+   ```
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+7. Run php artisan migrate to add tables into database
+    ```sh
+   php artisan migrate
+   ```
 
-### Premium Partners
+8. Run php artisan serve to Start the application
+    ```sh
+   php artisan serve
+   ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# laravel_blog
